@@ -19,4 +19,5 @@ int sumUpTo(int n) {
         sum += i;
     }
     return sum;
+    
 }
