@@ -15,6 +15,7 @@ using namespace std;
 
 int sumUpTo(int n) {
     int sum = 0;
+    int x = 0;
     for (int i = 1; i <= n; i++) {
         sum += i;
     }
