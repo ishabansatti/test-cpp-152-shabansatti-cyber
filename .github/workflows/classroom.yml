@@ -13,20 +13,20 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: SumUpTo_Public.PositiveNumbers
-      id: sumupto_public-positivenumbers
+    - name: SumUpTo.PositiveNumbers
+      id: sumupto-positivenumbers
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: SumUpTo_Public.PositiveNumbers
+        test-name: SumUpTo.PositiveNumbers
         setup-command: ''
         command: make test
         timeout: 10
         max-score: 5
-    - name: SumUpTo_Public.EdgeCases
-      id: sumupto_public-edgecases
+    - name: SumUpTo.EdgeCases
+      id: sumupto-edgecases
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: SumUpTo_Public.EdgeCases
+        test-name: SumUpTo.EdgeCases
         setup-command: ''
         command: make test
         timeout: 10
@@ -34,7 +34,7 @@ jobs:
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        SUMUPTO_PUBLIC-POSITIVENUMBERS_RESULTS: "${{steps.sumupto_public-positivenumbers.outputs.result}}"
-        SUMUPTO_PUBLIC-EDGECASES_RESULTS: "${{steps.sumupto_public-edgecases.outputs.result}}"
+        SUMUPTO-POSITIVENUMBERS_RESULTS: "${{steps.sumupto-positivenumbers.outputs.result}}"
+        SUMUPTO-EDGECASES_RESULTS: "${{steps.sumupto-edgecases.outputs.result}}"
       with:
-        runners: sumupto_public-positivenumbers,sumupto_public-edgecases
+        runners: sumupto-positivenumbers,sumupto-edgecases
