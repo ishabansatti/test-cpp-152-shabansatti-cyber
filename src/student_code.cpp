@@ -19,7 +19,7 @@ int sumUpTo(int n) {
     for (int i = 1; i <= n; i++) {
         sum += i;
         //hello
-        //h
+        //height
     
     }
     return sum;
