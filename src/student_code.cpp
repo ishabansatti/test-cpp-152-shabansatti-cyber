@@ -20,7 +20,7 @@ int sumUpTo(int n) {
         sum += i;
         //hello
         //h
-        //a
+    
     }
     return sum;
     
